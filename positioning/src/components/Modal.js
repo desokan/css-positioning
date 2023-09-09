@@ -31,7 +31,6 @@ const Modal = () => {
       {isOpen && (
         <div>
           <div className={styles.modalBackdrop}></div>
-
           <div className={styles.modalBody}>
             <button onClick={handleClose}>Close</button>
             <h2>Wombat Newsletter</h2>
