@@ -1,4 +1,3 @@
-// Modal.js
 import React, { useState } from "react";
 import styles from "./Modal.module.css"; // Use backticks for importing CSS modules
 
@@ -20,7 +19,6 @@ const Modal = () => {
           <p>
             Find out what's going on at Wombat Coffee each month. Sign up for
             our newsletter:
-            <br></br>
             <button onClick={handleOpen} id="open">
               Sign up
             </button>
@@ -32,10 +30,12 @@ const Modal = () => {
         <div>
           <div className={styles.modalBackdrop}></div>
           <div className={styles.modalBody}>
-            <button onClick={handleClose}>Close</button>
+            <button onClick={handleClose} className={styles.modalClose}>
+              Close
+            </button>
             <h2>Wombat Newsletter</h2>
             <p>Sign up for our monthly newsletter. No spam. We promise!</p>
-            <form onSubmit={''}>
+            <form onSubmit={""}>
               <p>
                 <label htmlFor="email">Email address:</label>
                 <input type="text" name="email" />
