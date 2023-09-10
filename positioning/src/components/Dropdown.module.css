@@ -3,8 +3,9 @@ body {
 }
 
 .topBanner {
+    margin-top: 2em;
   padding: 0.25em 0;
-  background-color: #c0e9b3;
+  background-color: #df8257;
 }
 
 .topBannerInner {

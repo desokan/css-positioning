@@ -17,10 +17,10 @@ const Modal = () => {
       <header className={styles.topBanner}>
         <div className={styles.topBannerInner}>
           <p>
-            Find out what's going on at Wombat Coffee each month. Sign up for
-            our newsletter:
+            Practice how to create a Modal
+            <br></br>
             <button onClick={handleOpen} id="open">
-              Sign up
+              Open Modal
             </button>
           </p>
         </div>

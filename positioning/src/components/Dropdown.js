@@ -20,10 +20,7 @@ const Dropdown = () => {
     <>
       <header className={styles.topBanner}>
         <div className={styles.topBannerInner}>
-          <p>
-            Find out what's going on at Wombat Coffee each month. Sign up for
-            our newsletter.
-          </p>
+          <p>Practicing how to create a dropdown menu with React Component.</p>
         </div>
       </header>
 
