@@ -52,7 +52,9 @@ button {
   font-size: 2em;
   height: 1em;
   width: 1em;
-  text-indent: 10em;
+  /* The text-indent CSS property sets the length of empty space (indentation) that is put before lines of text in a block. */
+  text-indent: 11em;
+  /* Sets the desired behaviour when content does not fit in the parent element box (overflows) - options => visible, hidden, scroll, auto, clip */
   overflow: hidden;
   border: 0;
 }
