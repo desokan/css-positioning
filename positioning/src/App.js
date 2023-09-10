@@ -1,10 +1,10 @@
 import React from "react";
-import Modal from "./components/Modal";
+import Dropdown from "./components/Dropdown";
 
 const App = () => {
   return (
     <div>
-      <Modal></Modal>
+      <Dropdown></Dropdown>
     </div>
   );
 };
