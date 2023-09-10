@@ -30,7 +30,7 @@ const Dropdown = () => {
       <div className={styles.container}>
         <nav>
           <div className={styles.dropdown}>
-            <div className={styles.dropdownBabel}>
+            <div className={styles.dropdownLabel}>
               Dropdown - Controlled With CSS
             </div>
             <div className={styles.dropdownMenu}>
@@ -59,7 +59,7 @@ const Dropdown = () => {
         <nav>
           <div className={styles.dropdown}>
             <div
-              className={styles.dropdownBabel}
+              className={styles.dropdownLabel}
               onClick={handleOpen}
               onMouseEnter={handleMouseEnter}
             >
