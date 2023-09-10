@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Dropdown.module.css";
 
 const Dropdown = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+    console.log(open);
+  };
 
   return (
     <>
@@ -17,7 +23,7 @@ const Dropdown = () => {
       <div className={styles.container}>
         <nav>
           <div className={styles.dropdown}>
-            <div className={styles.dropdownBabel}>Main Menu</div>
+            <div onClick={handleOpen} className={styles.dropdownBabel}>Main Menu</div>
             <div className={styles.dropdownMenu}>
               <ul className={styles.submenu}>
                 <li>
