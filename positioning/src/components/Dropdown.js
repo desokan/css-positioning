@@ -2,11 +2,18 @@ import React, { useState } from "react";
 import styles from "./Dropdown.module.css";
 
 const Dropdown = () => {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
-    setOpen(true);
-    console.log(open);
+    setIsOpen(!isOpen);
+  };
+
+  const handleMouseEnter = () => {
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -23,7 +30,9 @@ const Dropdown = () => {
       <div className={styles.container}>
         <nav>
           <div className={styles.dropdown}>
-            <div onClick={handleOpen} className={styles.dropdownBabel}>Main Menu</div>
+            <div className={styles.dropdownBabel}>
+              Dropdown - Controlled With CSS
+            </div>
             <div className={styles.dropdownMenu}>
               <ul className={styles.submenu}>
                 <li>
@@ -47,6 +56,41 @@ const Dropdown = () => {
         </nav>
 
         <h1>Wombat Coffee Roasters</h1>
+        <nav>
+          <div className={styles.dropdown}>
+            <div
+              className={styles.dropdownBabel}
+              onClick={handleOpen}
+              onMouseEnter={handleMouseEnter}
+            >
+              Dropdown - Controlled with State
+            </div>
+            {isOpen && (
+              <div
+                onMouseLeave={handleMouseLeave}
+                className={styles.dropdownMenuWithState}
+              >
+                <ul className={styles.submenu}>
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li>
+                    <a href="/coffees">Coffees</a>
+                  </li>
+                  <li>
+                    <a href="/brewers">Brewers</a>
+                  </li>
+                  <li>
+                    <a href="/specials">Specials</a>
+                  </li>
+                  <li>
+                    <a href="/about">About us</a>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+        </nav>
       </div>
     </>
   );
